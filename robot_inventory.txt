@@ -1,0 +1,113 @@
+=== host ===
+ubuntu
+Linux ubuntu 5.10.104-tegra #1 SMP PREEMPT Sun Mar 19 07:55:28 PDT 2023 aarch64 aarch64 aarch64 GNU/Linux
+ 17:09:50 up  1:15,  0 users,  load average: 0.61, 0.66, 0.68
+
+=== network ===
+lo 127.0.0.1/8
+eth0 192.168.123.164/24
+docker0 172.17.0.1/16
+
+=== disk / mem ===
+/dev/nvme0n1p1  1.9T   36G  1.8T   2% /
+              total        used        free      shared  buff/cache   available
+Mem:           15Gi       2.3Gi        11Gi        36Mi       865Mi        12Gi
+
+=== cameras ===
+crw-rw-rw-+ 1 root plugdev 81, 0 Sep 26 15:54 /dev/video0
+crw-rw-rw-+ 1 root plugdev 81, 1 Sep 26 15:54 /dev/video1
+crw-rw-rw-+ 1 root plugdev 81, 2 Sep 26 15:54 /dev/video2
+crw-rw-rw-+ 1 root plugdev 81, 3 Sep 26 15:54 /dev/video3
+crw-rw-rw-+ 1 root plugdev 81, 4 Sep 26 15:54 /dev/video4
+crw-rw-rw-+ 1 root plugdev 81, 5 Sep 26 15:54 /dev/video5
+NVIDIA Tegra Video Input Device (platform:tegra-camrtc-ca):
+	/dev/media0
+
+Intel(R) RealSense(TM) Depth Ca (usb-3610000.xhci-2.1):
+	/dev/video0
+	/dev/video1
+	/dev/video2
+	/dev/video3
+	/dev/video4
+	/dev/video5
+	/dev/media1
+	/dev/media2
+
+
+=== usb ===
+Bus 002 Device 003: ID 8086:0b3a Intel Corp. 
+Bus 002 Device 002: ID 0bda:0411 Realtek Semiconductor Corp. 4-Port USB 3.0 Hub
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 003: ID 0403:6011 Future Technology Devices International, Ltd FT4232H Quad HS USB-UART/FIFO IC
+Bus 001 Device 004: ID 0bda:a85b Realtek Semiconductor Corp. 
+Bus 001 Device 002: ID 0bda:5411 Realtek Semiconductor Corp. 4-Port USB 2.0 Hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+=== relevant processes ===
+root         960  0.0  0.0  75364  4352 ?        Ssl  15:54   0:00 /unitree/sbin/key_server
+root        1197  0.0  0.1 537476 17004 ?        Sl   15:54   0:03 /unitree/module/master_service/master_service
+root        1201  0.0  0.0 460180  8744 ?        Sl   15:54   0:02 /unitree/ota/pipe/ota_pipe_service
+unitree     1371  0.0  0.0  18892  8972 ?        Ss   15:54   0:00 /lib/systemd/systemd --user
+unitree     1416  0.0  0.0 170392  5476 ?        S    15:54   0:00 (sd-pam)
+unitree     1561  0.0  0.0  43104  6408 ?        Ss   15:54   0:00 /usr/lib/bluetooth/obexd
+unitree     1562  0.0  0.1 287636 18752 ?        Ssl  15:54   0:00 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+unitree     1563  0.0  0.0   7812  3452 ?        Ss   15:54   0:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root        2168  0.0  0.0  11272  2524 ?        S    15:54   0:00 /unitree/module/video_hub_pc4/videohub_pc4_chest /dev/video10
+unitree     2669 12.1  0.0 627504 13424 ?        Ssl  15:55   9:00 /home/unitree/dex1_1_service/bin/dex1_1_gripper_server
+root        8862 14.8  0.3 27802008 52796 ?      Sl   17:07   0:24 /unitree/module/video_hub_pc4/videohub_pc4 /dev/video4
+root        9110  0.0  0.0  15276  7788 ?        Ss   17:09   0:00 sshd: unitree [priv]
+unitree     9178  0.0  0.0  15276  4536 ?        S    17:09   0:00 sshd: unitree@notty
+unitree     9179  0.0  0.0   9076  2704 ?        Ss   17:09   0:00 bash -s
+unitree     9193  0.0  0.0  11076  2816 ?        R    17:09   0:00 ps aux
+
+=== teleimager ===
+teleimager-server not on PATH
+
+=== home dir ===
+backup_unitree_sdk2_20260901
+bisect_120344.log
+cyclonedds_ws
+Desktop
+dex1_1_service
+dex1_gripper_server.log
+dex1_server.log
+dex1_server_new.log
+Documents
+Downloads
+finger_id_check.sh
+g1_description
+g1plus_pc4_unitree_install
+g1_rec
+gpio_test.sh
+hand_teleop_recv.py
+ik_cam_standalone.log
+ik_cam_standalone.log.prev
+librealsense
+log
+miniconda3
+Music
+nomachine.sh
+Pictures
+Public
+run_123317.log
+run_ik_camera.sh
+shukaku-ki-track-3
+stark_fix_ports.py
+stark_scan.py
+Templates
+test
+tmp
+tmp_NV_L4T_OPENCV_RUNTIME_TARGET_POST_INSTALL_COMP.cai_kun.sh
+touch_monitor.py
+unitree
+unitree-g1-brainco-hand
+unitree_ros2
+unitree_sdk2
+unitree_sdk2-main
+unitree_sdk2_python
+Videos
+wifi-bt-deb
+workSpace
+
+=== python sdk ===
+ModuleNotFoundError: No module named 'unitree_sdk2py'
